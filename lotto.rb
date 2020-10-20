@@ -5,8 +5,8 @@ lotto_ticket = []
   begin
     print "Enter a number from 1 to 45: "
     number = gets.to_i
-    raise ValueError if number < 1 && number > 45
-  rescue ValueError 
+    raise RangeError if number < 1 || number > 45
+  rescue RangeError 
     puts "You must enter a number from 1 to 45"
     retry 
   end
