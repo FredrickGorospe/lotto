@@ -26,7 +26,20 @@ end
 
 puts "You bet: #{lotto_ticket}"
 puts
-puts "The winning are: #{winning_numbers}"
-number_of_matches = lotto_ticket & winning_numbers
+puts "The winning numbers are: #{winning_numbers}"
+matching_numbers = lotto_ticket & winning_numbers
+puts "Matching numbers: #{matching_numbers}"
+number_of_matches = matching_numbers.length
 puts "Number of matches: #{number_of_matches}"
 
+if number_of_matches == 6 
+  puts "You win 100,000 pesos!"
+elsif number_of_matches == 5
+  puts "You win 75,000 pesos!"
+elsif number_of_matches == 4
+  puts "You win 20,000 pesos!"
+elsif number_of_matches == 3
+  puts "You win 100 pesos :<"
+else 
+  puts "A for effort"
+end
